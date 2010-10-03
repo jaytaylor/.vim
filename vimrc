@@ -9,7 +9,6 @@ set et
 set ruler
 
 " Searching
-set hlsearch
 set incsearch
 set ignorecase
 set smartcase
@@ -24,18 +23,19 @@ set t_vb=
 
 " gui
 if has("gui_running")
-    syntax on
-
     " pathogen
     filetype off
     call pathogen#runtime_append_all_bundles()
 
     " nerdtree binding
-    map <Leader>nt :NERDTree<CR>
+    map <Leader>a :NERDTreeToggle<CR>
+    map <Leader>s :NERDTree<CR>
 
     set guifont=Consolas\ for\ BBEdit:h12
     set guioptions=egmrt
     set columns=130
     colorscheme cocaine
-endif
+    syntax on
 
+    set tags=tags;/
+endif

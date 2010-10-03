@@ -1,19 +1,9 @@
-" Vim color file
-" Maintainer:   TaQ <eustaquiorangel@yahoo.com>
-" Last Change:  18 March 2003
-" URL: http://taq.cjb.net		
-
-" cool help screens
-" :he group-name
-" :he highlight-groups
-" :he cterm-colors
-
 set background=light
 hi clear
 if exists("syntax_on")
     syntax reset
 endif
-let colors_name="taqua"
+let colors_name="cocaine"
 
 hi Normal  gui=NONE guifg=#303030 guibg=#FFFFFF
 hi NonText gui=BOLD guifg=#303030 guibg=#FFFFFF
