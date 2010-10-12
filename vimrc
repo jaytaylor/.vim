@@ -276,17 +276,21 @@ if has("gui")
   map <F4> :TlistToggle<CR>:colorscheme jay-xoria256<CR>
   let Tlist_Use_Right_Window = 1
 
+  " space / shift-space scroll in normal mode
+  noremap <S-space> <C-b>
+  noremap <space> <C-f>
+
 else
 
   "colorscheme jay-xoria256
   map <F4> :TlistToggle<CR>
   let Tlist_Use_Right_Window = 1
 
+  " space / shift-space scroll in normal mode
+  noremap <S-K> <C-b>
+  noremap <S-J> <C-f>
 endif
 
-" space / shift-space scroll in normal mode
-noremap <S-space> <C-b>
-noremap <space> <C-f>
 
 
 
@@ -294,4 +298,8 @@ noremap <space> <C-f>
 
 
 :highlight LineNr term=NONE cterm=NONE ctermfg=Gray ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+
+
+"nnoremap <S-J> :set scroll=0<CR>:set scroll^=2<CR>:set scroll-=1<CR><C-D>:set scroll=0<CR>
+
 
