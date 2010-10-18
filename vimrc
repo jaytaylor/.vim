@@ -63,11 +63,11 @@ set incsearch " do highlight as you type you search phrase
 set so=10 " Keep 10 lines (top/bottom) for scope
 set ffs=unix,dos,mac   " support all three, in this order
 
-set statusline=%<%{StatusFN(0)}%1*%{StatusFN(1)}%m%0*\ %F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [\%03.3b\x10]\ [\%02.2B\x16]\ [LEN=%L]\ %=%04l,%03v\ [%p%%]
-
 function StatusFN(changed)
   if &mod == a:changed | return expand('%') | else | return '' | endif
 endfunction
+
+set statusline=%<%{StatusFN(0)}%1*%{StatusFN(1)}%m%0*\ %F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [\%03.3b\x10]\ [\%02.2B\x16]\ [LEN=%L]\ %=%04l,%03v\ [%p%%]
 
 highlight StatusLine term=bold,reverse cterm=bold,reverse ctermfg=0 ctermbg=4 guifg=#ffffff guibg=#000000
 " Turn off bells and whistles 
